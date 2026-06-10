@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -39,12 +41,20 @@ body{
 
 .marquee::before{
     left:0;
-    background:linear-gradient(to right, #222222, rgba(34,34,34,0));
+    background:linear-gradient(
+        to right,
+        #222222,
+        rgba(34,34,34,0)
+    );
 }
 
 .marquee::after{
     right:0;
-    background:linear-gradient(to left, #222222, rgba(34,34,34,0));
+    background:linear-gradient(
+        to left,
+        #222222,
+        rgba(34,34,34,0)
+    );
 }
 
 .track{
@@ -56,18 +66,19 @@ body{
 }
 
 .logo-wrap{
-    width:220px;
+    width:240px;
     height:80px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:0 20px;
+
     flex-shrink:0;
 }
 
 .logo{
-    max-width:100%;
-    max-height:100%;
+    max-width:80%;
+    max-height:80%;
     width:auto;
     height:auto;
     display:block;
@@ -77,20 +88,23 @@ body{
     from{
         transform:translate3d(0,0,0);
     }
+
     to{
         transform:translate3d(-50%,0,0);
     }
 }
 
+/* TABLET */
+
 @media (max-width:900px){
+
     .track{
-        animation-duration:45s;
+        animation-duration:55s;
     }
 
     .logo-wrap{
-        width:150px;
-        height:60px;
-        margin:0 15px;
+        width:180px;
+        height:65px;
     }
 
     .marquee::before,
@@ -99,19 +113,21 @@ body{
     }
 }
 
+/* MÓVIL */
+
 @media (max-width:600px){
+
     .marquee{
         padding:16px 0;
     }
 
     .track{
-        animation-duration:32s;
+        animation-duration:42s;
     }
 
     .logo-wrap{
-        width:120px;
-        height:50px;
-        margin:0 12px;
+        width:140px;
+        height:55px;
     }
 
     .marquee::before,
@@ -119,15 +135,17 @@ body{
         width:45px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <div class="marquee">
+
 <div class="track">
 
-<!-- LOGOS ORIGINALES -->
+<!-- LOGOS -->
 
 <div class="logo-wrap"><img src="logos/logo01.svg" class="logo"></div>
 <div class="logo-wrap"><img src="logos/logo02.svg" class="logo"></div>
@@ -157,7 +175,7 @@ body{
 <div class="logo-wrap"><img src="logos/logo26.svg" class="logo"></div>
 <div class="logo-wrap"><img src="logos/logo27.svg" class="logo"></div>
 
-<!-- LOGOS DUPLICADOS PARA LOOP INFINITO -->
+<!-- DUPLICADOS PARA LOOP INFINITO -->
 
 <div class="logo-wrap"><img src="logos/logo01.svg" class="logo"></div>
 <div class="logo-wrap"><img src="logos/logo02.svg" class="logo"></div>
@@ -188,7 +206,9 @@ body{
 <div class="logo-wrap"><img src="logos/logo27.svg" class="logo"></div>
 
 </div>
+
 </div>
 
 </body>
 </html>
+```
