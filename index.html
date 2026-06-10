@@ -1,191 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html, body{
-  width:100%;
-  overflow:hidden;
-  background:transparent;
+html,
+body{
+    width:100%;
+    overflow:hidden;
+    background:#222222;
 }
 
 .marquee{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  padding:22px 0;
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    padding:22px 0;
+    background:#222222;
 }
 
 .marquee::before,
 .marquee::after{
-  content:"";
-  position:absolute;
-  top:0;
-  width:90px;
-  height:100%;
-  z-index:2;
-  pointer-events:none;
+    content:"";
+    position:absolute;
+    top:0;
+    width:90px;
+    height:100%;
+    z-index:2;
+    pointer-events:none;
 }
 
 .marquee::before{
-  left:0;
-  background:linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+    left:0;
+    background:linear-gradient(
+        to right,
+        #222222,
+        rgba(34,34,34,0)
+    );
 }
 
 .marquee::after{
-  right:0;
-  background:linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+    right:0;
+    background:linear-gradient(
+        to left,
+        #222222,
+        rgba(34,34,34,0)
+    );
 }
 
 .track{
-  display:flex;
-  align-items:center;
-  width:max-content;
-  will-change:transform;
-  animation: scroll 70s linear infinite;
+    display:flex;
+    align-items:center;
+    width:max-content;
+    will-change:transform;
+    animation:scroll 70s linear infinite;
 }
 
 .logo{
-  height:54px;
-  width:auto;
-  margin:0 42px;
-  flex-shrink:0;
-  opacity:.7;
-  filter:brightness(0) invert(1);
-  transition:opacity .25s ease, transform .25s ease, filter .25s ease;
+    height:54px;
+    width:auto;
+    margin:0 42px;
+    flex-shrink:0;
+
+    opacity:.7;
+
+    transition:
+    opacity .25s ease,
+    transform .25s ease,
+    filter .25s ease;
 }
 
 .logo:hover{
-  opacity:1;
-  transform:scale(1.06);
-  filter:brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,.45));
+    opacity:1;
+
+    transform:scale(1.06);
+
+    filter:
+    brightness(0)
+    invert(1)
+    drop-shadow(0 0 8px rgba(255,255,255,.45));
 }
 
 @keyframes scroll{
-  from{
-    transform:translate3d(0,0,0);
-  }
-  to{
-    transform:translate3d(-50%,0,0);
-  }
+    from{
+        transform:translate3d(0,0,0);
+    }
+
+    to{
+        transform:translate3d(-50%,0,0);
+    }
 }
 
-/* Tablet */
-@media (max-width: 900px){
-  .track{
-    animation-duration:55s;
-  }
+/* TABLET */
 
-  .logo{
-    height:44px;
-    margin:0 32px;
-  }
+@media (max-width:900px){
 
-  .marquee::before,
-  .marquee::after{
-    width:60px;
-  }
+    .track{
+        animation-duration:55s;
+    }
+
+    .logo{
+        height:44px;
+        margin:0 32px;
+    }
+
+    .marquee::before,
+    .marquee::after{
+        width:60px;
+    }
 }
 
-/* Celular */
-@media (max-width: 600px){
-  .marquee{
-    padding:16px 0;
-  }
+/* MÓVIL */
 
-  .track{
-    animation-duration:42s;
-  }
+@media (max-width:600px){
 
-  .logo{
-    height:34px;
-    margin:0 24px;
-  }
+    .marquee{
+        padding:16px 0;
+    }
 
-  .marquee::before,
-  .marquee::after{
-    width:45px;
-  }
+    .track{
+        animation-duration:42s;
+    }
+
+    .logo{
+        height:34px;
+        margin:0 24px;
+    }
+
+    .marquee::before,
+    .marquee::after{
+        width:45px;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
 <div class="marquee">
-  <div class="track">
 
-    <!-- BLOQUE 1 -->
-    <img src="logos/logo01.svg" class="logo">
-    <img src="logos/logo02.svg" class="logo">
-    <img src="logos/logo03.svg" class="logo">
-    <img src="logos/logo04.svg" class="logo">
-    <img src="logos/logo05.svg" class="logo">
-    <img src="logos/logo06.svg" class="logo">
-    <img src="logos/logo07.svg" class="logo">
-    <img src="logos/logo08.svg" class="logo">
-    <img src="logos/logo09.svg" class="logo">
-    <img src="logos/logo10.svg" class="logo">
-    <img src="logos/logo11.svg" class="logo">
-    <img src="logos/logo12.svg" class="logo">
-    <img src="logos/logo13.svg" class="logo">
-    <img src="logos/logo14.svg" class="logo">
-    <img src="logos/logo15.svg" class="logo">
-    <img src="logos/logo16.svg" class="logo">
-    <img src="logos/logo17.svg" class="logo">
-    <img src="logos/logo18.svg" class="logo">
-    <img src="logos/logo19.svg" class="logo">
-    <img src="logos/logo20.svg" class="logo">
-    <img src="logos/logo21.svg" class="logo">
-    <img src="logos/logo22.svg" class="logo">
-    <img src="logos/logo23.svg" class="logo">
-    <img src="logos/logo24.svg" class="logo">
-    <img src="logos/logo25.svg" class="logo">
-    <img src="logos/logo26.svg" class="logo">
-    <img src="logos/logo27.svg" class="logo">
-    <img src="logos/logo28.svg" class="logo">
-    <img src="logos/logo29.svg" class="logo">
+<div class="track">
 
-    <!-- BLOQUE 2 DUPLICADO -->
-    <img src="logos/logo01.svg" class="logo">
-    <img src="logos/logo02.svg" class="logo">
-    <img src="logos/logo03.svg" class="logo">
-    <img src="logos/logo04.svg" class="logo">
-    <img src="logos/logo05.svg" class="logo">
-    <img src="logos/logo06.svg" class="logo">
-    <img src="logos/logo07.svg" class="logo">
-    <img src="logos/logo08.svg" class="logo">
-    <img src="logos/logo09.svg" class="logo">
-    <img src="logos/logo10.svg" class="logo">
-    <img src="logos/logo11.svg" class="logo">
-    <img src="logos/logo12.svg" class="logo">
-    <img src="logos/logo13.svg" class="logo">
-    <img src="logos/logo14.svg" class="logo">
-    <img src="logos/logo15.svg" class="logo">
-    <img src="logos/logo16.svg" class="logo">
-    <img src="logos/logo17.svg" class="logo">
-    <img src="logos/logo18.svg" class="logo">
-    <img src="logos/logo19.svg" class="logo">
-    <img src="logos/logo20.svg" class="logo">
-    <img src="logos/logo21.svg" class="logo">
-    <img src="logos/logo22.svg" class="logo">
-    <img src="logos/logo23.svg" class="logo">
-    <img src="logos/logo24.svg" class="logo">
-    <img src="logos/logo25.svg" class="logo">
-    <img src="logos/logo26.svg" class="logo">
-    <img src="logos/logo27.svg" class="logo">
-    <img src="logos/logo28.svg" class="logo">
-    <img src="logos/logo29.svg" class="logo">
+<!-- LOGOS -->
 
-  </div>
+<img src="logos/logo01.svg" class="logo">
+<img src="logos/logo02.svg" class="logo">
+<img src="logos/logo03.svg" class="logo">
+<img src="logos/logo04.svg" class="logo">
+<img src="logos/logo05.svg" class="logo">
+<img src="logos/logo06.svg" class="logo">
+<img src="logos/logo07.svg" class="logo">
+<img src="logos/logo08.svg" class="logo">
+<img src="logos/logo09.svg" class="logo">
+<img src="logos/logo10.svg" class="logo">
+<img src="logos/logo11.svg" class="logo">
+<img src="logos/logo12.svg" class="logo">
+<img src="logos/logo13.svg" class="logo">
+<img src="logos/logo14.svg" class="logo">
+<img src="logos/logo15.svg" class="logo">
+<img src="logos/logo16.svg" class="logo">
+<img src="logos/logo17.svg" class="logo">
+<img src="logos/logo18.svg" class="logo">
+<img src="logos/logo19.svg" class="logo">
+<img src="logos/logo20.svg" class="logo">
+<img src="logos/logo21.svg" class="logo">
+<img src="logos/logo22.svg" class="logo">
+<img src="logos/logo23.svg" class="logo">
+<img src="logos/logo24.svg" class="logo">
+<img src="logos/logo25.svg" class="logo">
+<img src="logos/logo26.svg" class="logo">
+<img src="logos/logo27.svg" class="logo">
+<img src="logos/logo28.svg" class="logo">
+<img src="logos/logo29.svg" class="logo">
+
+<!-- DUPLICADOS PARA LOOP INFINITO -->
+
+<img src="logos/logo01.svg" class="logo">
+<img src="logos/logo02.svg" class="logo">
+<img src="logos/logo03.svg" class="logo">
+<img src="logos/logo04.svg" class="logo">
+<img src="logos/logo05.svg" class="logo">
+<img src="logos/logo06.svg" class="logo">
+<img src="logos/logo07.svg" class="logo">
+<img src="logos/logo08.svg" class="logo">
+<img src="logos/logo09.svg" class="logo">
+<img src="logos/logo10.svg" class="logo">
+<img src="logos/logo11.svg" class="logo">
+<img src="logos/logo12.svg" class="logo">
+<img src="logos/logo13.svg" class="logo">
+<img src="logos/logo14.svg" class="logo">
+<img src="logos/logo15.svg" class="logo">
+<img src="logos/logo16.svg" class="logo">
+<img src="logos/logo17.svg" class="logo">
+<img src="logos/logo18.svg" class="logo">
+<img src="logos/logo19.svg" class="logo">
+<img src="logos/logo20.svg" class="logo">
+<img src="logos/logo21.svg" class="logo">
+<img src="logos/logo22.svg" class="logo">
+<img src="logos/logo23.svg" class="logo">
+<img src="logos/logo24.svg" class="logo">
+<img src="logos/logo25.svg" class="logo">
+<img src="logos/logo26.svg" class="logo">
+<img src="logos/logo27.svg" class="logo">
+<img src="logos/logo28.svg" class="logo">
+<img src="logos/logo29.svg" class="logo">
+
+</div>
+
 </div>
 
 </body>
