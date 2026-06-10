@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -40,20 +39,12 @@ body{
 
 .marquee::before{
     left:0;
-    background:linear-gradient(
-        to right,
-        #222222,
-        rgba(34,34,34,0)
-    );
+    background:linear-gradient(to right, #222222, rgba(34,34,34,0));
 }
 
 .marquee::after{
     right:0;
-    background:linear-gradient(
-        to left,
-        #222222,
-        rgba(34,34,34,0)
-    );
+    background:linear-gradient(to left, #222222, rgba(34,34,34,0));
 }
 
 .track{
@@ -64,35 +55,42 @@ body{
     animation:scroll 70s linear infinite;
 }
 
-.logo{
-    height:54px;
-    width:auto;
-    margin:0 42px;
+.logo-wrap{
+    width:220px;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 20px;
     flex-shrink:0;
-    opacity:.7;
+}
+
+.logo{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    display:block;
 }
 
 @keyframes scroll{
     from{
         transform:translate3d(0,0,0);
     }
-
     to{
         transform:translate3d(-50%,0,0);
     }
 }
 
-/* TABLET */
-
 @media (max-width:900px){
-
     .track{
         animation-duration:55s;
     }
 
-    .logo{
-        height:44px;
-        margin:0 32px;
+    .logo-wrap{
+        width:150px;
+        height:60px;
+        margin:0 15px;
     }
 
     .marquee::before,
@@ -101,10 +99,7 @@ body{
     }
 }
 
-/* MÓVIL */
-
 @media (max-width:600px){
-
     .marquee{
         padding:16px 0;
     }
@@ -113,9 +108,10 @@ body{
         animation-duration:42s;
     }
 
-    .logo{
-        height:34px;
-        margin:0 24px;
+    .logo-wrap{
+        width:120px;
+        height:50px;
+        margin:0 12px;
     }
 
     .marquee::before,
@@ -123,82 +119,79 @@ body{
         width:45px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
 <div class="marquee">
-
 <div class="track">
 
-<!-- LOGOS -->
+<!-- LOGOS ORIGINALES -->
 
-<img src="logos/logo01.svg" class="logo">
-<img src="logos/logo02.svg" class="logo">
-<img src="logos/logo03.svg" class="logo">
-<img src="logos/logo04.svg" class="logo">
-<img src="logos/logo05.svg" class="logo">
-<img src="logos/logo06.svg" class="logo">
-<img src="logos/logo07.svg" class="logo">
-<img src="logos/logo08.svg" class="logo">
-<img src="logos/logo09.svg" class="logo">
-<img src="logos/logo10.svg" class="logo">
-<img src="logos/logo11.svg" class="logo">
-<img src="logos/logo12.svg" class="logo">
-<img src="logos/logo13.svg" class="logo">
-<img src="logos/logo14.svg" class="logo">
-<img src="logos/logo15.svg" class="logo">
-<img src="logos/logo16.svg" class="logo">
-<img src="logos/logo17.svg" class="logo">
-<img src="logos/logo18.svg" class="logo">
-<img src="logos/logo19.svg" class="logo">
-<img src="logos/logo20.svg" class="logo">
-<img src="logos/logo21.svg" class="logo">
-<img src="logos/logo22.svg" class="logo">
-<img src="logos/logo23.svg" class="logo">
-<img src="logos/logo24.svg" class="logo">
-<img src="logos/logo25.svg" class="logo">
-<img src="logos/logo26.svg" class="logo">
-<img src="logos/logo27.svg" class="logo">
-<img src="logos/logo28.svg" class="logo">
-<img src="logos/logo29.svg" class="logo">
+<div class="logo-wrap"><img src="logos/logo01.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo02.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo03.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo04.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo05.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo06.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo07.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo08.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo09.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo10.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo11.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo12.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo13.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo14.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo15.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo16.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo17.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo18.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo19.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo20.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo21.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo22.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo23.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo24.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo25.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo26.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo27.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo28.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo29.svg" class="logo"></div>
 
-<!-- DUPLICADOS PARA LOOP PERFECTO -->
+<!-- LOGOS DUPLICADOS PARA LOOP INFINITO -->
 
-<img src="logos/logo01.svg" class="logo">
-<img src="logos/logo02.svg" class="logo">
-<img src="logos/logo03.svg" class="logo">
-<img src="logos/logo04.svg" class="logo">
-<img src="logos/logo05.svg" class="logo">
-<img src="logos/logo06.svg" class="logo">
-<img src="logos/logo07.svg" class="logo">
-<img src="logos/logo08.svg" class="logo">
-<img src="logos/logo09.svg" class="logo">
-<img src="logos/logo10.svg" class="logo">
-<img src="logos/logo11.svg" class="logo">
-<img src="logos/logo12.svg" class="logo">
-<img src="logos/logo13.svg" class="logo">
-<img src="logos/logo14.svg" class="logo">
-<img src="logos/logo15.svg" class="logo">
-<img src="logos/logo16.svg" class="logo">
-<img src="logos/logo17.svg" class="logo">
-<img src="logos/logo18.svg" class="logo">
-<img src="logos/logo19.svg" class="logo">
-<img src="logos/logo20.svg" class="logo">
-<img src="logos/logo21.svg" class="logo">
-<img src="logos/logo22.svg" class="logo">
-<img src="logos/logo23.svg" class="logo">
-<img src="logos/logo24.svg" class="logo">
-<img src="logos/logo25.svg" class="logo">
-<img src="logos/logo26.svg" class="logo">
-<img src="logos/logo27.svg" class="logo">
-<img src="logos/logo28.svg" class="logo">
-<img src="logos/logo29.svg" class="logo">
+<div class="logo-wrap"><img src="logos/logo01.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo02.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo03.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo04.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo05.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo06.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo07.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo08.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo09.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo10.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo11.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo12.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo13.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo14.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo15.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo16.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo17.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo18.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo19.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo20.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo21.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo22.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo23.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo24.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo25.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo26.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo27.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo28.svg" class="logo"></div>
+<div class="logo-wrap"><img src="logos/logo29.svg" class="logo"></div>
 
 </div>
-
 </div>
 
 </body>
